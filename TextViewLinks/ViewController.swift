@@ -54,7 +54,7 @@ class ViewController: UIViewController {
         self.textView.font = UIFont.preferredFontForTextStyle(UIFontTextStyleSubheadline)
     }
     
-    // could make this an NSString extension
+    // could make this an NSAttributedString extension
     /// creates and returns an NSAttributedString with a hyperlink
     class func hyperlinkFromString(string:NSString, withURLString:String) -> NSAttributedString {
         
@@ -74,7 +74,6 @@ class ViewController: UIViewController {
 
 // so you can respond to the link being long-pressed
 extension ViewController : UITextViewDelegate {
-    
     
     func textView(UITextView!,
         shouldInteractWithURL URL: NSURL!,
@@ -96,10 +95,7 @@ extension ViewController : UITextViewDelegate {
             }
             
             return true
-            
     }
-    
-    
 }
 
 
